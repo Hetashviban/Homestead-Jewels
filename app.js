@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -8,6 +10,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+// Log the Stripe keys to verify they are being loaded correctly
+console.log('Stripe Publishable Key:', process.env.STRIPE_PUBLISHABLE_KEY);
+console.log('Stripe Secret Key:', process.env.STRIPE_SECRET_KEY);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
