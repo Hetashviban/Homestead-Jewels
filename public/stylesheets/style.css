@@ -61,10 +61,56 @@ footer {
   text-align: center;
   padding: 1rem 0;
   width: 100%;
-  margin: 0%;
 }
 
 img{
   width: 10em;
   height: 10em;
+}
+
+
+/* Payments Page */
+.payment-page{
+  text-align: center;
+}
+
+.payment-success-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.next-steps {
+  margin-top: 30px;
+}
+
+.next-steps h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.next-steps ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.next-steps ul li {
+  font-size: 1em;
+  color: #555;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.next-steps ul li a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.next-steps ul li a:hover {
+  text-decoration: underline;
 }
