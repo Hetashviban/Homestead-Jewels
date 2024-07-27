@@ -1,13 +1,74 @@
-<h3>Welcome to Payment Gateway</h3>
-<form action="/payment" method="POST">
-  <script
-    src="https://checkout.stripe.com/v2/checkout.js"
-    class="stripe-button"
-    data-key="{{key}}"
-    data-amount="7000"
-    data-currency="usd"
-    data-name="Gautam Sharma"
-    data-description="Buy React.js Complete Course"
-    data-locale="auto">
-  </script>
-</form>
+<header>
+  <h1>Homestead Jewels</h1>
+</header>
+<main>
+  <h2>Welcome to Homestead Jewels</h2>
+  <p>Discover our exquisite collection of handmade jewelry.</p>
+
+  <h3>Items for Sale</h3>
+  <div class="items">
+    <!-- Item 1 -->
+    <div class="item">
+      <h4>Blue Pearl Flower</h4>
+      <img src="/images/2.jpeg" alt="Serene Blossom Bracelet">
+      <p>A beautiful necklace combining pearls and intricate blue and white bead flowers, evoking the serene beauty of the ocean.</p>
+      <p>$30.00</p>
+      <form action="/payment" method="POST">
+        <script
+          src="https://checkout.stripe.com/v2/checkout.js"
+          class="stripe-button"
+          data-key="{{key}}"
+          data-amount="3000"
+          data-currency="cad"
+          data-name="Homestead Jewels"
+          data-description="Buy Blue Pearl Flower"
+          data-locale="auto"
+        >
+        </script>
+      </form>
+    </div>
+    <!-- Item 2 -->
+    <div class="item">
+      <h4>Serene Blossom Bracelet</h4>
+      <img src="/images/1.jpeg" alt="Serene Blossom Bracelet">
+      <p> A set of bracelets featuring a mix of white and green beads with a charming daisy charm.</p>
+      <p>$30.00</p>
+      <form action="/payment" method="POST">
+        <script
+          src="https://checkout.stripe.com/v2/checkout.js"
+          class="stripe-button"
+          data-key="{{key}}"
+          data-amount="3000"
+          data-currency="cad"
+          data-name="Homestead Jewels"
+          data-description="Buy Serene Blossom Bracelet"
+          data-locale="auto"
+        >
+        </script>
+      </form>
+    </div>
+    <!-- Item 3 -->
+    <div class="item">
+      <h4>Golden Harmony Bracelet</h4>
+      <img src="/images/4.jpeg" alt="Golden Harmony Bracelet">
+      <p>A pair of bracelets combining gold beads and freshwater pearls, creating a delicate and harmonious look.</p>
+      <p>$40.00</p>
+      <form action="/payment" method="POST">
+        <script
+          src="https://checkout.stripe.com/v2/checkout.js"
+          class="stripe-button"
+          data-key="{{key}}"
+          data-amount="4000"
+          data-currency="usd"
+          data-name="Homestead Jewels"
+          data-description="Buy Golden Harmony Bracelet"
+          data-locale="auto"
+        >
+        </script>
+      </form>
+    </div>
+  </div>
+</main>
+<footer>
+  <p>&copy; 2024 Homestead Jewels. All rights reserved.</p>
+</footer>

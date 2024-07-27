@@ -1,31 +1,31 @@
 var express = require('express');
 var router = express.Router();
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Add this line to ensure stripe is required
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Ensure stripe is required
 
 /* POST payment route. */
 router.post('/', function(req, res, next) {
   stripe.customers.create({
     email: req.body.stripeEmail,
     source: req.body.stripeToken,
-    name: 'Gautam Sharma',
+    name: 'Homestead Jewels',
     address: {
-      line1: '23 Mountain Valley',
-      postal_code: '110001',
-      city: 'New Delhi',
-      state: 'Delhi',
-      country: 'India'
+      line1: '1 Georgian Dr',
+      postal_code: 'L4M 3X9',
+      city: 'Barrie',
+      state: 'Ontario',
+      country: 'Canada'
     }
   })
   .then((customer) => {
     return stripe.charges.create({
       amount: 7000,
       description: 'Web Dev',
-      currency: 'usd',
+      currency: 'cad',
       customer: customer.id
     });
   })
   .then((charge) => {
-    res.send("Success!");
+    res.render('payment', { title: 'Payment Success' });
   })
   .catch((err) => {
     res.send(err.message);
